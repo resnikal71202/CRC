@@ -17,11 +17,11 @@ CRC32::CRC32()
 void CRC32::reset()
 {
   _polynome   = CRC32_DEFAULT_POLYNOME;
-  _startMask  = 0;
-  _endMask    = 0;
+  _startMask  = 0xFFFFFFFF;
+  _endMask    = 0xFFFFFFFF;
   _crc        = 0;
-  _reverseIn  = false;
-  _reverseOut = false;
+  _reverseIn  = true;
+  _reverseOut = true;
   _started    = false;
   _count      = 0;
 }
